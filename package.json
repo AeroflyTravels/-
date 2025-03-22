@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://AeroflyTravels.github.io/npm",
+  "homepage": "https://AeroflyTravels.github.io/nppm",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
