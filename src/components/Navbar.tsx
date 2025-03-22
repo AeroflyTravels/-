@@ -13,10 +13,11 @@ export function Navbar() {
             <Link to="/" className="flex items-center">
               <div className="h-12 w-40 relative">
                 <img 
-                  src="src/assets/img/logo.png" 
+                  src="/nppm/src/assets/img/logo.png" 
                   alt="Aerofly Travels"
                   title='Aerofly Travels'
                   className="h-full w-full object-contain"
+                  
                 />
               </div>
               <span className="text-lg font-semibold text-gray-900">Aerofly Travels</span>

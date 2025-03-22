@@ -5,39 +5,39 @@ export function TrustSection() {
   const partners = [
     {
       name: 'IATA',
-      logo: 'src/assets/logo/iata.svg'
+      logo: '/nppm/src/assets/logo/iata.svg'
     },
     {
       name: 'ADTOI',
-      logo: 'src/assets/logo/ADTOI.svg'
+      logo: '/nppm/src/assets/logo/ADTOI.svg'
     },
     {
       name: 'TAAI',
-      logo: 'src/assets/logo/taai.svg'
+      logo: '/nppm/src/assets/logo/taai.svg'
     },
     {
       name: 'IATO',
-      logo: 'src/assets/logo/image-21.svg'
+      logo: '/nppm/src/assets/logo/image-21.svg'
     },
     {
       name: 'TAFI',
-      logo: 'src/assets/logo/tafi.svg'
+      logo: '/nppm/src/assets/logo/tafi.svg'
     },
     {
       name: 'OTOAI',
-      logo: 'src/assets/logo/otoai.svg'
+      logo: '/nppm/src/assets/logo/otoai.svg'
     },
     {
       name: 'Incredible India',
-      logo: 'src/assets/logo/Incredible-India-300x70.png'
+      logo: '/nppm/src/assets/logo/Incredible-India-300x70.png'
     },
     {
       name: 'Ministry of Tourism',
-      logo: 'src/assets/logo/image-13.svg'
+      logo: '/nppm/src/assets/logo/image-13.svg'
     },
     {
       name: 'ISO',
-      logo: 'src/assets/logoo/image-11.svg'
+      logo: '/nppm/src/assets/logoo/image-11.svg'
     }
   ];
 
