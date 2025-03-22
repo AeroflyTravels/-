@@ -5,39 +5,39 @@ export function TrustSection() {
   const partners = [
     {
       name: 'IATA',
-      logo: '/nppm/src/assets/logo/iata.svg'
+      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/iata.svg'
     },
     {
       name: 'ADTOI',
-      logo: '/nppm/src/assets/logo/ADTOI.svg'
+      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/ADTOI.svg'
     },
     {
       name: 'TAAI',
-      logo: '/nppm/src/assets/logo/taai.svg'
+      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/taai.svg'
     },
     {
       name: 'IATO',
-      logo: '/nppm/src/assets/logo/image-21.svg'
+      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/image-21.svg'
     },
     {
       name: 'TAFI',
-      logo: '/nppm/src/assets/logo/tafi.svg'
+      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/tafi.svg'
     },
     {
       name: 'OTOAI',
-      logo: '/nppm/src/assets/logo/otoai.svg'
+      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/otoai.svg'
     },
     {
       name: 'Incredible India',
-      logo: '/nppm/src/assets/logo/Incredible-India-300x70.png'
+      logo: 'https://jetsavetours.in/wp-content/uploads/2024/03/Incredible-India-300x70.png'
     },
     {
       name: 'Ministry of Tourism',
-      logo: '/nppm/src/assets/logo/image-13.svg'
+      logo: 'https://jetsavetours.in/wp-content/uploads/2024/03/image-13.svg'
     },
     {
       name: 'ISO',
-      logo: '/nppm/src/assets/logoo/image-11.svg'
+      logo: 'https://jetsavetours.in/wp-content/uploads/2024/03/image-11.svg'
     }
   ];
 
