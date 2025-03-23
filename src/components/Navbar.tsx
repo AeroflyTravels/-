@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logoo from "../assets/img/logo.png";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -13,7 +14,7 @@ export function Navbar() {
             <Link to="/" className="flex items-center">
               <div className="h-12 w-40 relative">
                 <img 
-                  src="/nppm/src/assets/img/logo.png" 
+                  src={logoo}
                   alt="Aerofly Travels"
                   title='Aerofly Travels'
                   className="h-full w-full object-contain"

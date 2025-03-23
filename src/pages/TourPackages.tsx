@@ -1,6 +1,36 @@
 import React from 'react';
 import { Calendar, Users, MapPin, Star } from 'lucide-react';
+import thailand from "../assets/img/thailand.jpg";
+import malaysia from "../assets/img/malaysia.jpg";
+import singapore from "../assets/img/singapore.jpg";
+import baku from "../assets/img/baku.jpg";
+import mexico from "../assets/img/mexico.jpg";
+import bali from "../assets/img/bali.jpg";
+import vietnam from "../assets/img/vietnam.jpg";
+import vegas from "../assets/img/lasvegas.jpg";
+import canton from "../assets/img/canton.jpg";
+import sringar from "../assets/img/srinagr.jpg";
+import joyti   from "../assets/img/12.jpg";
+import jim   from "../assets/img/jim.jpg";
+import srilanka   from "../assets/img/srilanka.jpg";
+import dubai  from "../assets/img/dubai.jpg";
+import char   from "../assets/img/char.jpg";
+import maharaja   from "../assets/img/maharaja.jpg";
+import andaman   from "../assets/img/andaman.jpg";
+import taj   from "../assets/img/taj.jpg";
+import leh   from "../assets/img/taj.jpg";
+import south   from "../assets/img/south.jpg";
+import sakurajapan   from "../assets/img/sakura.jpg";
+import private_island   from "../assets/img/sakura.jpg";
+import northen_lights   from "../assets/img/iceland.jpg";
+import santorini   from "../assets/img/santorini.jpg";
 
+
+/**
+ * Component that renders a list of tour packages.
+ *
+ * @returns {React.ReactElement} The rendered component.
+ */
 export function TourPackages() {
   const packages = [
     {
@@ -28,7 +58,7 @@ export function TourPackages() {
     {
       id: 3,
       title: 'Thailand Explorer',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: thailand,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -39,7 +69,7 @@ export function TourPackages() {
     {
       id: 4,
       title: 'Baku, Azerbaijan',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: baku,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -61,7 +91,7 @@ export function TourPackages() {
     {
       id: 6,
       title: 'Mexico',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: mexico,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -72,7 +102,7 @@ export function TourPackages() {
     {
       id: 7,
       title: 'Bali',
-      image: '',
+      image: bali,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -83,7 +113,7 @@ export function TourPackages() {
     {
       id: 8,
       title: 'Las Vegas',
-      image: '',
+      image: vegas,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -94,7 +124,7 @@ export function TourPackages() {
     {
       id: 9,
       title: 'Vietnam',
-      image: 'https://unsplash.com/photos/city-skyline-during-night-time-wUk2U5Wirxg',
+      image: vietnam,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -116,7 +146,7 @@ export function TourPackages() {
     {
       id: 11,
       title: 'Sri Lanka',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: srilanka,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -127,7 +157,7 @@ export function TourPackages() {
     {
     id: 12,
       title: 'Malaysia',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: malaysia,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -138,7 +168,7 @@ export function TourPackages() {
     {
       id: 13,
       title: 'Singapore',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: singapore,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -149,7 +179,7 @@ export function TourPackages() {
     {
       id: 14,
       title: 'Dubai',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: dubai,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -160,7 +190,7 @@ export function TourPackages() {
     {
       id: 15,
       title: 'Char Dham Yatra',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: char,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -171,7 +201,7 @@ export function TourPackages() {
     {
       id: 16,
       title: 'Canton Fair',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: canton,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -182,7 +212,7 @@ export function TourPackages() {
     {
       id: 17,
       title: 'Srinagar',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: sringar,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -204,7 +234,7 @@ export function TourPackages() {
     {
       id: 19,
       title: '12 Jyotirlinga Darshan',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: joyti,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -215,7 +245,7 @@ export function TourPackages() {
     {
       id: 20,
       title: 'Jim Corbett National Park',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: jim,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -237,7 +267,7 @@ export function TourPackages() {
     {
       id: 22,
       title: "Maharajas' Express – The Heritage Train 🚂👑",
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: maharaja,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -248,7 +278,7 @@ export function TourPackages() {
     {
       id: 23,
       title: "Andaman Luxury Beach Escape 🏝️🌊",
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: andaman,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -259,7 +289,7 @@ export function TourPackages() {
     {
       id: 24,
       title: "Taj Mahal & Luxury Golden Triangle Tour 🏛️❤️",
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: taj,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -270,7 +300,7 @@ export function TourPackages() {
     {
       id: 25,
       title: "Ladakh Luxury Adventure Tour 🏔️🚙",
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: leh,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -281,7 +311,7 @@ export function TourPackages() {
     {
       id: 26,
       title: "South India Temple & Culture Tour 🏛️🎭",
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: south,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -292,7 +322,7 @@ export function TourPackages() {
     {
       id: 27,
       title: "Japan Luxury Cherry Blossom Tour 🇯🇵🌸",
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: sakurajapan,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -303,7 +333,7 @@ export function TourPackages() {
     {
       id: 28,
       title: "Bora Bora Private Island Retreat 🌺🏝️",
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: private_island,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -314,7 +344,7 @@ export function TourPackages() {
     {
       id: 29,
       title: "Iceland & Northern Lights Luxury Tour ❄️🌌",
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: northen_lights,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -325,7 +355,7 @@ export function TourPackages() {
     {
       id: 30,
       title: "Santorini & Mykonos Greek Island Tour 🇬🇷⛵",
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: santorini,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',

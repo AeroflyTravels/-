@@ -1,43 +1,82 @@
 import React from 'react';
 import { Shield, Star, Clock, Award, Quote } from 'lucide-react';
+import IATA from "../assets/logo/iata.svg";
+import ADTOI from "../assets/logo/ADTOI.svg";
+import TAAI from "../assets/logo/taai.svg";
+import USgovLogo from "../assets/logo/USgov.png";
+import ItlayGov from "../assets/logo/itlay.png";
+import iato from "../assets/logo/iato.svg";
+import tafi from "../assets/logo/tafi.svg";
+import OTOAI from "../assets/logo/otoai.svg";
+import IncredibleIndia from "../assets/logo/Incredible-India-300x70.png";
+import MinistryofTourism from "../assets/logo/mti.svg";
+import ISO from "../assets/logo/iso.svg";
+import german from "../assets/logo/german.png";
+
+
+
+/**
+ * TrustSection component displays a section with partner logos, 
+ * key services offered, and customer testimonials.
+ * 
+ * - Partners: Displays logos of authorizing partners in a continuous slider.
+ * - Key Services: Highlights the main services including secure booking, 
+ *   best prices, 24/7 support, and trusted agency status.
+ * - Testimonials: Showcases customer feedback with star ratings.
+ * 
+ * The section is styled to be responsive, with animations for the partner 
+ * logos and interactive scaling for testimonials.
+ */
 
 export function TrustSection() {
   const partners = [
     {
       name: 'IATA',
-      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/iata.svg'
+      logo: IATA
     },
     {
       name: 'ADTOI',
-      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/ADTOI.svg'
+      logo:  ADTOI
     },
     {
       name: 'TAAI',
-      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/taai.svg'
+      logo:  TAAI
+    },
+    {
+      name: 'US Gov',
+      logo: USgovLogo
+    },
+    {
+      name: 'Italy Gov',
+      logo: ItlayGov
     },
     {
       name: 'IATO',
-      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/image-21.svg'
+      logo: iato
     },
     {
       name: 'TAFI',
-      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/tafi.svg'
+      logo:  tafi
     },
     {
       name: 'OTOAI',
-      logo: 'https://jetsavetours.in/wp-content/uploads/2024/04/otoai.svg'
+      logo:  OTOAI
     },
     {
       name: 'Incredible India',
-      logo: 'https://jetsavetours.in/wp-content/uploads/2024/03/Incredible-India-300x70.png'
+      logo: IncredibleIndia
     },
     {
       name: 'Ministry of Tourism',
-      logo: 'https://jetsavetours.in/wp-content/uploads/2024/03/image-13.svg'
+      logo: MinistryofTourism
     },
     {
       name: 'ISO',
-      logo: 'https://jetsavetours.in/wp-content/uploads/2024/03/image-11.svg'
+      logo: ISO
+    },
+    {
+      name: 'German Gov',
+      logo: german
     }
   ];
 
@@ -98,35 +137,39 @@ export function TrustSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Authorizing Partners</h2>
           <div className="relative overflow-hidden">
-            <div className="flex animate-scroll">
+            <div className="flex w-max animate-scroll">
               {/* First set of logos */}
-              {partners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="flex-none w-48 h-24 mx-8 flex items-center justify-center"
-                >
-                  <img 
-                    src={partner.logo} 
-                    alt={partner.name}
-                    className="max-h-16 w-auto object-contain filter brightness-100 contrast-100"
-                  />
-                </div>
-              ))}
-              {/* Duplicate set for seamless loop */}
-              {partners.map((partner) => (
-                <div
-                  key={`${partner.name}-duplicate`}
-                  className="flex-none w-48 h-24 mx-8 flex items-center justify-center"
-                >
-                  <img 
-                    src={partner.logo} 
-                    alt={partner.name}
-                    className="max-h-16 w-auto object-contain filter brightness-100 contrast-100"
-                  />
-                </div>
-              ))}
+              {partners.concat(partners).map((partner, index) => (
+  <div
+    key={index}
+    className="flex-none w-48 h-24 mx-8 flex items-center justify-center"
+  >
+    <img 
+      src={partner.logo} 
+      alt={partner.name}
+      className="max-h-16 w-auto object-contain filter brightness-100 contrast-100"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+))}
             </div>
           </div>
+          <style>{`
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll 50s linear infinite; /* Adjust speed here */
+  }
+`}</style>
+
         </div>
 
         {/* Testimonials Section */}
