@@ -1,5 +1,5 @@
 import React from 'react';
-import { Car, Hotel, Umbrella, Plane, Train, Shield } from 'lucide-react';
+import { Car, Hotel, Umbrella, Plane, Train, Shield, ArchiveRestore, User, Handshake, HeartHandshake, Scale } from 'lucide-react';
 
 export function OtherServices() {
   const services = [
@@ -70,7 +70,7 @@ export function OtherServices() {
       ]
     },
     {
-      icon: <Shield className="h-12 w-12" />,
+      icon: <ArchiveRestore className="h-12 w-12" />,
       title: "Visa Facilitation",
       description: "Obtaining a visa seems a hassle? Not anymore! Aerofy Travels ’ expertise in comprehensive visa facilitation services for all countries with Embassies, Consulates, or High Commissions in India makes obtaining a visa a cakewalk. Our visa facilitation services include visa documentation, visa application, and visa processing.",
       features: [
@@ -81,7 +81,7 @@ export function OtherServices() {
       ]
     },
     {
-      icon: <Shield className="h-12 w-12" />,
+      icon: <User className="h-12 w-12" />,
       title: "Online Visa Forms",
       description: "Simplify your visa application process with our expert online form-filling service. Our expert online visa form-filling service is designed to take the hassle out of visa applications, ensuring accuracy, efficiency, and peace of mind for our clients.",
       features: [
@@ -92,7 +92,7 @@ export function OtherServices() {
       ]
     },
     {
-      icon: <Shield className="h-12 w-12" />,
+      icon: <Handshake className="h-12 w-12" />,
       title: "Meeting and Assistance",
       description: "Our expert team assists you at every step, from documentation to airport support, ensuring a stress-free visa process and travel experience. Our meet and assist services include personalised assistance, ensuring a seamless journey.",
       features: [
@@ -103,7 +103,7 @@ export function OtherServices() {
       ]
     },
     {
-      icon: <Shield className="h-12 w-12" />,
+      icon: <Scale className="h-12 w-12" />,
       title: "Attestation and Legalisation",
       description: "Our visa experts specialise in the systematic attestation and legalisation of various documents—commercial and non-commercial—at every level, from State to MEA to Embassy, ensuring seamless international acceptance.",
       features: [
@@ -114,7 +114,7 @@ export function OtherServices() {
       ]
     },
     {
-      icon: <Shield className="h-12 w-12" />,
+      icon: <HeartHandshake className="h-12 w-12" />,
       title: "Onsite  Support & Implant",
       description: "Experience the pinnacle of visa facilitation with our Onsite Support & Implant service. Our highly skilled executives, equipped with extensive visa expertise, are strategically stationed at your office to provide unparalleled assistance, ensuring efficient visa processes for your team.",
       features: [
@@ -125,7 +125,7 @@ export function OtherServices() {
       ]
     },
     {
-      icon: <Shield className="h-12 w-12" />,
+      icon: <User className="h-12 w-12" />,
       title: "Indian E-Visa",
       description: "Our expert team streamlines travel to India with expert facilitation of Indian E-Visas for foreign nationals. Simplify your journey for business or leisure; Aerofy Travels  ensures a seamless online visa application process, making travel hassle-free..",
       features: [

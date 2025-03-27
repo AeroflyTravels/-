@@ -46,7 +46,9 @@ export function Navbar() {
             <Link to="/packages" className="text-gray-700 hover:text-blue-600 px-3 py-2">Tour Packages</Link>
             <Link to="/blog" className="text-gray-700 hover:text-blue-600 px-3 py-2">Blog</Link>
             <Link to="/other-services" className="text-gray-700 hover:text-blue-600 px-3 py-2">Other Services</Link>
+            <Link to="/Gallery" className="text-gray-700 hover:text-blue-600 px-3 py-2">Gallery</Link>
             <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2">Contact</Link>
+            
           </div>
         </div>
 

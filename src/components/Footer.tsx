@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, MessageSquareMore } from 'lucide-react';
+import logooo from "../assets/img/logo.png";
 
 export function Footer() {
   return (
@@ -11,7 +12,7 @@ export function Footer() {
           <div>
             <div className="h-12 w-40 relative mb-4">
               <img 
-                src="/src/assets/img/logo.png" 
+                src={logooo}
                 alt="Aerofly Travels"
                 className="h-full w-full object-contain brightness-0 invert"
               />

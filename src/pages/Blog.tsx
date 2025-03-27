@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, User } from 'lucide-react';
+import { Link } from "react-router-dom"; // Import Link at the top
 
 export function Blog() {
   const posts = [
@@ -69,9 +70,9 @@ export function Blog() {
                     <Calendar className="h-4 w-4 ml-4 mr-1" />
                     <span style={{ color: '#2a9df4' }}>{post.date}</span>
                   </div>
-                  <button className="mt-4 font-medium transition-colors"style={{ color: '#2a9df4' }}>
+                  <Link to={`/blog/${post.id}`} className="mt-4 font-medium transition-colors" style={{ color: '#2a9df4' }}>
                     Read More →
-                  </button>
+                </Link>
                 </div>
               </article>
             ))}

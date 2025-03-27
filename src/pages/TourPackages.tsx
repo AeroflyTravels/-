@@ -18,13 +18,13 @@ import char   from "../assets/img/char.jpg";
 import maharaja   from "../assets/img/maharaja.jpg";
 import andaman   from "../assets/img/andaman.jpg";
 import taj   from "../assets/img/taj.jpg";
-import leh   from "../assets/img/taj.jpg";
+import leh   from "../assets/img/leh.jpg";
 import south   from "../assets/img/south.jpg";
 import sakurajapan   from "../assets/img/sakura.jpg";
-import private_island   from "../assets/img/sakura.jpg";
+import private_island   from "../assets/img/bora.jpg";
 import northen_lights   from "../assets/img/iceland.jpg";
 import santorini   from "../assets/img/santorini.jpg";
-
+import royal   from "../assets/img/rajsthan.jpg";
 
 /**
  * Component that renders a list of tour packages.
@@ -78,17 +78,6 @@ export function TourPackages() {
       category: 'Budget',
     },
     {
-      id: 5,
-      title: 'United States',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
-      duration: '8 Days',
-      people: '1-3',
-      destination: 'Bangkok, Phuket',
-      price: 1499,
-      rating: 4.7,
-      category: 'Luxury',
-    },
-    {
       id: 6,
       title: 'Mexico',
       image: mexico,
@@ -131,17 +120,6 @@ export function TourPackages() {
       price: 1499,
       rating: 4.7,
       category: 'Budget',
-    },
-    {
-      id: 10,
-      title: 'Solo Trip or Group Trip',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
-      duration: '8 Days',
-      people: '1-3',
-      destination: 'Uttrakhand, RishiKesh',
-      price: 1499,
-      rating: 4.7,
-      category: 'Adventure',
     },
     {
       id: 11,
@@ -221,17 +199,6 @@ export function TourPackages() {
       category: 'Honeymoon',
     },
     {
-      id: 18,
-      title: "Himalayan Wellness & Spa Tour 🏔️🧘‍♂️",
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
-      duration: '8 Days',
-      people: '1-3',
-      destination: 'Bangkok, Phuket',
-      price: 1499,
-      rating: 4.7,
-      category: 'Solo',
-    },
-    {
       id: 19,
       title: '12 Jyotirlinga Darshan',
       image: joyti,
@@ -256,7 +223,7 @@ export function TourPackages() {
     {
       id: 21,
       title: 'Royal Rajasthan Luxury Tour',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      image: royal,
       duration: '8 Days',
       people: '1-3',
       destination: 'Bangkok, Phuket',
@@ -306,7 +273,7 @@ export function TourPackages() {
       destination: 'Bangkok, Phuket',
       price: 1499,
       rating: 4.7,
-      category: 'Solo',
+      category: 'Adventure',
     },
     {
       id: 26,
@@ -365,7 +332,7 @@ export function TourPackages() {
     },
   ];
 
-  const categories = ['All', 'Adventure', 'Luxury', 'Budget', 'Honeymoon', 'Solo', 'Religious', 'Event'];
+  const categories = ['All', 'Adventure', 'Luxury', 'Budget', 'Honeymoon', 'Religious', 'Event'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
   return (

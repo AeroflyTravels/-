@@ -15,6 +15,8 @@ import { FAQ } from './pages/FAQ';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { OtherServices } from './pages/OtherServices';
+import  BlogPost  from "./pages/blogpost"; // Import the BlogPost page
+import  Gallery  from "./pages/gallery"; // Import the BlogPost page
 
 function App() {
   return (
@@ -40,6 +42,9 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} /> {/* New blog post route */}
+            <Route path="/gallery" element={<Gallery />} /> {/* ✅ Add Gallery Route */}
           </Routes>
         </main>
         <Footer />
@@ -49,3 +54,4 @@ function App() {
 }
 
 export default App;
+// Compare this snippet from src/pages/Blog.tsx:
