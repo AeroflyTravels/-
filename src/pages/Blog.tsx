@@ -31,6 +31,33 @@ export function Blog() {
       date: 'March 10, 2025',
       category:  'Budget Travel',
     },
+    {
+      id: 4,
+      title: 'Budget Travel: Tips for Saving Money',
+      excerpt: 'Learn how to make the most of your travel budget with these expert tips...',
+      image: 'https://images.unsplash.com/photo-1499591934245-40b55745b905?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      author: 'Emily Brown',
+      date: 'March 10, 2025',
+      category:  'Budget Travel',
+    },
+    {
+      id: 5,
+      title: 'Budget Travel: Tips for Saving Money',
+      excerpt: 'Learn how to make the most of your travel budget with these expert tips...',
+      image: 'https://images.unsplash.com/photo-1499591934245-40b55745b905?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      author: 'Emily Brown',
+      date: 'March 10, 2025',
+      category:  'Budget Travel',
+    },
+    {
+      id: 6,
+      title: 'Budget Travel: Tips for Saving Money',
+      excerpt: 'Learn how to make the most of your travel budget with these expert tips...',
+      image: 'https://images.unsplash.com/photo-1499591934245-40b55745b905?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      author: 'Emily Brown',
+      date: 'March 10, 2025',
+      category:  'Budget Travel',
+    },
   ];
 
   return (
