@@ -196,7 +196,7 @@ export function OtherServices() {
               onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#1f8ae3'}
               onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2a9df4'}
               onClick={() => {
-                window.location.href = '';
+                window.location.href = '/contact';
               }}>
             Contact Us
             </button>
