@@ -191,12 +191,15 @@ export function OtherServices() {
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Our travel experts are here to assist you in creating the perfect travel experience with our comprehensive services.
           </p>
-          <button className="text-white px-8 py-3 rounded-md transition-colors" 
-                  style={{ backgroundColor: '#2a9df4' }}
-                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#1f8ae3'}
-                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2a9df4'}>
+            <button className="text-white px-8 py-3 rounded-md transition-colors" 
+              style={{ backgroundColor: '#2a9df4' }}
+              onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#1f8ae3'}
+              onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2a9df4'}
+              onClick={() => {
+                window.location.href = '';
+              }}>
             Contact Us
-          </button>
+            </button>
         </div>
       </div>
     </div>
