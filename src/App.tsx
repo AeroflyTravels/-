@@ -17,6 +17,7 @@ import { Terms } from './pages/Terms';
 import { OtherServices } from './pages/OtherServices';
 import  BlogPost  from "./pages/blogpost"; // Import the BlogPost page
 import  Gallery  from "./pages/gallery"; // Import the BlogPost page
+import ServiceDetails from "./pages/service";
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} /> {/* New blog post route */}
             <Route path="/gallery" element={<Gallery />} /> {/* ✅ Add Gallery Route */}
+            <Route path="/" element={<OtherServices />} />
+            <Route path="/service/:title" element={<ServiceDetails />} />
           </Routes>
         </main>
         <Footer />
