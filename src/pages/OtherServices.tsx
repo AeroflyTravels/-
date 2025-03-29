@@ -1,7 +1,9 @@
 import React from 'react';
 import { Car, Hotel, Umbrella, Plane, Train, Shield, ArchiveRestore, User, Handshake, HeartHandshake, Scale } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
 
 export function OtherServices() {
+  const navigate = useNavigate();
   const services = [
     {
       icon: <Car className="h-12 w-12" />,
@@ -171,13 +173,17 @@ export function OtherServices() {
                     </li>
                   ))}
                 </ul>
-                <button
-                  className="mt-6 w-full text-white py-2 rounded-md hover:bg-blue-700 transition-colors"
+                <a
+                  href="https://api.whatsapp.com/send?phone=91858698042&text=Hello%20I%20am%20interested%20in%20your%20services"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 w-full block text-center text-white py-2 rounded-md hover:bg-blue-700 transition-colors"
                   style={{ backgroundColor: '#2a9df4' }}
-                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#1f8ae3'}
-                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2a9df4'}>
+                  onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#1f8ae3')}
+                  onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#2a9df4')}
+                >
                   Learn More
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -191,14 +197,14 @@ export function OtherServices() {
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Our travel experts are here to assist you in creating the perfect travel experience with our comprehensive services.
           </p>
-            <button className="text-white px-8 py-3 rounded-md transition-colors" 
+            <button 
+              className="text-white px-8 py-3 rounded-md transition-colors" 
               style={{ backgroundColor: '#2a9df4' }}
               onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#1f8ae3'}
               onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2a9df4'}
-              onClick={() => {
-                window.location.href = '/contact';
-              }}>
-            Contact Us
+              onClick={() => {navigate('/contact')}}
+            >
+              Contact Us
             </button>
         </div>
       </div>
