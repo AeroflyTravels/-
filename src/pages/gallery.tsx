@@ -1,5 +1,6 @@
 import { useState } from "react";
 import thailand from "../assets/img/thailand.jpg";
+import gallary from "../assets/images/gallary.jpg";
 
 const Gallery = () => {
   const images = [
@@ -41,7 +42,7 @@ const Gallery = () => {
       <div 
         className="relative h-96 bg-cover bg-center"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2021&q=80")',
+          backgroundImage: `url(${gallary}`,
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
