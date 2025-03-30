@@ -1,67 +1,49 @@
-const express = require("express");
-const cors = require("cors");
-const fs = require("fs");
-const xlsx = require("xlsx");
+import dotenv from "dotenv";
+import express from "express";
+import cors from "cors";
+import nodemailer from "nodemailer";
+
+dotenv.config(); // Load environment variables
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // Middleware to handle JSON requests
+app.use(express.json()); // Parse JSON requests
 
-const FILE_PATH = "./visa_applications.xlsx"; // Excel file location
+// Route to handle form submissions
+app.post("/api/contact", async (req, res) => {
+  const { firstName, lastName, email, subject, message } = req.body;
 
-// Function to save form data to Excel
-const saveToExcel = (data) => {
-    let workbook;
-    let worksheet;
+  if (!firstName || !lastName || !email || !message) {
+    return res.status(400).json({ error: "All fields are required" });
+  }
 
-    // If file exists, read it; otherwise, create a new one
-    if (fs.existsSync(FILE_PATH)) {
-        workbook = xlsx.readFile(FILE_PATH);
-        worksheet = workbook.Sheets["Applications"] || xlsx.utils.aoa_to_sheet([]);
-    } else {
-        workbook = xlsx.utils.book_new();
-        worksheet = xlsx.utils.aoa_to_sheet([]);
-    }
+  try {
+    // Setup Nodemailer transporter
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-    // Convert worksheet to JSON
-    let sheetData = xlsx.utils.sheet_to_json(worksheet, { header: 1 });
+    // Email details
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: "mysky.del@outlook.com", // Change this to your preferred email
+      subject: subject || "New Contact Form Submission",
+      text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nMessage: ${message}`,
+    };
 
-    // If file is new, add headers
-    if (sheetData.length === 0) {
-        sheetData.push([
-            "First Name", "Last Name", "Email", "Phone", 
-            "Passport Number", "Date of Issue", "Date of Expiry", "Place of Issue",
-            "Destination", "Visa Type", "Travel Date", "Duration of Stay", "Notes"
-        ]);
-    }
-
-    // Add new row
-    sheetData.push([
-        data.firstName, data.lastName, data.email, data.phone,
-        data.passportNumber, data.dateOfIssue, data.dateOfExpiry, data.placeOfIssue,
-        data.destination, data.visaType, data.travelDate, data.duration, data.notes
-    ]);
-
-    // Convert back to worksheet and save
-    const newWorksheet = xlsx.utils.aoa_to_sheet(sheetData);
-    workbook.Sheets["Applications"] = newWorksheet;
-    xlsx.writeFile(workbook, FILE_PATH);
-};
-
-// API route to handle form submissions
-app.post("/submit", (req, res) => {
-    const formData = req.body;
-    
-    try {
-        saveToExcel(formData);
-        res.status(200).json({ message: "Application saved successfully!" });
-    } catch (error) {
-        res.status(500).json({ error: "Failed to save application" });
-    }
+    // Send email
+    await transporter.sendMail(mailOptions);
+    res.json({ success: "Message sent successfully!" });
+  } catch (error) {
+    console.error("Email Error:", error);
+    res.status(500).json({ error: "Failed to send message. Try again later." });
+  }
 });
 
-// Start server
-const PORT = 5000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+// Start the server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

@@ -41,7 +41,6 @@ export function Navbar() {
 
           {/* Desktop menu */}
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
-            <Link to="/flights" className="text-gray-700 hover:text-blue-600 px-3 py-2">Flights</Link>
             <Link to="/visas" className="text-gray-700 hover:text-blue-600 px-3 py-2">Visa Services</Link>
             <Link to="/packages" className="text-gray-700 hover:text-blue-600 px-3 py-2">Tour Packages</Link>
             <Link to="/blog" className="text-gray-700 hover:text-blue-600 px-3 py-2">Blog</Link>

@@ -22,7 +22,7 @@ export function Hero() {
             Your journey begins here. Book flights, apply for visas, and explore our curated tour packages.
           </p>
           <div className="mt-8">
-            <a href="/flights" className="inline-block bg-[#2a9df4] text-white px-8 py-3 rounded-md hover:bg-[#1e87d6] transition-colors">
+            <a href="/nppm/packages" className="inline-block bg-[#2a9df4] text-white px-8 py-3 rounded-md hover:bg-[#1e87d6] transition-colors">
               Book Now
             </a>
           </div>
