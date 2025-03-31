@@ -62,16 +62,16 @@ export function Blog() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="relative w-full min-h-screen">
       {/* Hero Section */}
       <div 
-        className="relative h-96 bg-cover bg-center"
+        className="relative h-[600px] bg-cover bg-center"
         style={{
           backgroundImage: `url(${blog})`,
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative h-full flex items-center justify-center">
+        <div className="relative min-h-[600px] w-full flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Travel Blog</h1>
             <p className="text-xl text-white">Your trusted partner in creating unforgettable travel experiences</p>

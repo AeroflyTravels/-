@@ -3,18 +3,21 @@ import Heroo from '../assets/images/home.jpg'; // Adjust the path as necessary
 
 export function Hero() {
   return (
-    <div className="relative">
+    <div className="relative w-full min-h-screen">
+      {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center w-full h-full"
         style={{
           backgroundImage: `url(${Heroo})`,
         }}
       >
+        {/* Dark Overlay for better readability */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="text-center">
+
+      {/* Content Section */}
+      <div className="relative flex items-center justify-center min-h-screen text-center px-4 sm:px-6 lg:px-8">
+        <div>
           <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
             <span className="block">Discover the World with</span>
             <span className="block text-[#2a9df4]">Aerofly Travels</span>
@@ -23,7 +26,7 @@ export function Hero() {
             Your journey begins here. Book flights, apply for visas, and explore our curated tour packages.
           </p>
           <div className="mt-8">
-            <a href="/nppm/packages" className="inline-block bg-[#2a9df4] text-white px-8 py-3 rounded-md hover:bg-[#1e87d6] transition-colors">
+            <a href="/packages" className="inline-block bg-[#2a9df4] text-white px-8 py-3 rounded-md hover:bg-[#1e87d6] transition-colors">
               Book Now
             </a>
           </div>

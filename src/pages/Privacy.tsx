@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Privacy() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="relative w-full min-h-screen">
       {/* Hero Section */}
       <div className="bg-[#2a9df4] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

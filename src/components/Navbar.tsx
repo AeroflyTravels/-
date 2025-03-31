@@ -7,7 +7,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-lg">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -20,7 +20,7 @@ export function Navbar() {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <span className="text-lg font-semibold text-white">
+              <span className="text-lg font-semibold text-yellow-400 ml-2">
                 Aerofly Travels
               </span>
             </Link>
