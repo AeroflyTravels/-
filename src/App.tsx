@@ -15,28 +15,21 @@ import { FAQ } from "./pages/FAQ";
 import { Privacy } from "./pages/Privacy";
 import { Terms } from "./pages/Terms";
 import { OtherServices } from "./pages/OtherServices";
-import { Hero as HomePage } from "./components/Hero"; // Use Hero as HomePage
-import BlogPost from "./pages/blogpost"; // Ensure consistent casing
-import Gallery from "./pages/gallery"; // Ensure consistent casing
+import BlogPost from "./pages/blogpost";
+import Gallery from "./pages/gallery";
 import ServiceDetails from "./pages/service";
 
 function App() {
   return (
     <Router basename="/nppm">
-      <div className="min-h-screen bg-background flex flex-col">
+      <div className="min-h-screen flex flex-col bg-background">
+        {/* ✅ Mobile Optimized Navbar */}
         <Navbar />
+
         <main className="flex-grow">
           <Routes>
             {/* ✅ Home Page */}
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  <TrustSection />
-                </>
-              }
-            />
+            <Route path="/" element={<><Hero /><TrustSection /></>} />
 
             {/* ✅ Redirect /nppm to Home */}
             <Route path="/nppm" element={<Navigate to="/" replace />} />
@@ -57,10 +50,12 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/service/:title" element={<ServiceDetails />} />
 
-            {/* ✅ Catch-all 404 Page */}
+            {/* ✅ Catch-all 404 Redirect */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
+
+        {/* ✅ Mobile Optimized Footer */}
         <Footer />
       </div>
     </Router>

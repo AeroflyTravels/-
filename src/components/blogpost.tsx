@@ -47,12 +47,18 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="max-w-3xl mx-auto py-16 px-6">
-      <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-      <p className="text-gray-500 mb-2">
-        By <span className="text-[#2a9df4]">{post.author}</span> | {post.date}
+    <div className="max-w-screen-md mx-auto py-10 px-4 sm:px-6">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">{post.title}</h1>
+      
+      <p className="text-gray-500 text-sm sm:text-base mb-4 text-center">
+        By <span className="text-[#2a9df4] font-semibold">{post.author}</span> | {post.date}
       </p>
-      <p className="text-lg text-gray-700 mt-4">{post.content}</p>
+
+      <hr className="border-gray-300 mb-6" />
+
+      <p className="text-lg sm:text-xl text-gray-700 leading-relaxed text-justify">
+        {post.content}
+      </p>
     </div>
   );
 };

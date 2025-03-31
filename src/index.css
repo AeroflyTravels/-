@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling animation */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -14,34 +15,43 @@
 .animate-scroll {
   animation: scroll 20s linear infinite;
 }
+
+/* Blog Container */
 .blog-container {
   width: 100vw; /* Full viewport width */
   min-height: 100vh; /* Full viewport height */
-  padding: 40px 10vw; /* Adjust horizontal padding for readability */
-  background-color: #fff; /* Set background color */
-  align-items: left;
+  padding: 40px 5vw; /* Adjust horizontal padding for readability */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Blog Content */
 .blog-content {
   width: 100%;
   max-width: 1200px; /* Ensures good readability */
-  margin: -10px auto; /* Center the content */  
+  margin: 0 auto;
 }
 
+/* Blog Title */
 .blog-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
+/* Blog Text */
 .blog-text {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.6;
   text-align: center;
-  max-width: 1%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
+/* Blog Image */
 .blog-image {
   width: 100%;
   display: flex;
@@ -55,22 +65,75 @@
   border-radius: 10px;
 }
 
+/* Blog Author */
 .blog-author {
   text-align: right;
   font-style: italic;
   margin-top: 20px;
-} 
+}
 
+/* General Page Styles */
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   height: 100%;
 }
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
+
+/* Hide Scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
 }
 
+/* Hide Scrollbar for Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .blog-container {
+    padding: 30px 4vw;
+  }
+
+  .blog-title {
+    font-size: 2rem;
+  }
+
+  .blog-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .blog-author {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blog-container {
+    padding: 20px 3vw;
+  }
+
+  .blog-title {
+    font-size: 1.8rem;
+  }
+
+  .blog-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .blog-author {
+    font-size: 0.85rem;
+  }
+}
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}

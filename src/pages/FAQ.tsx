@@ -43,61 +43,57 @@ export function FAQ() {
     <div className="relative w-full min-h-screen">
       {/* Hero Section */}
       <div 
-        className="relative h-[600px] bg-cover bg-center"
+        className="relative h-[300px] md:h-[500px] bg-cover bg-center"
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2021&q=80")',
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative min-h-[600px] w-full flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h1>
-            <p className="text-xl text-white">Find answers to common questions about our services</p>
+        <div className="relative flex items-center justify-center text-center px-4 min-h-[300px] md:min-h-[500px]">
+          <div>
+            <h1 className="text-2xl md:text-4xl font-bold text-white mb-3 capitalize">Frequently Asked Questions</h1>
+            <p className="text-lg md:text-xl text-white">Find answers to common questions about our services</p>
           </div>
         </div>
       </div>
 
       {/* FAQ Section */}
-      <div className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
+      <div className="py-12 px-4 md:px-8">
+        <div className="max-w-3xl mx-auto space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
+            >
+              <button
+                className="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <button
-                  className="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                >
-                  <span className="text-lg font-medium">{faq.question}</span>
-                  {openIndex === index ? (
-                    <Minus className="h-5 w-5 text-blue-600" />
-                  ) : (
-                    <Plus className="h-5 w-5 text-blue-600" />
-                  )}
-                </button>
-                {openIndex === index && (
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
+                <span className="text-lg font-medium">{faq.question}</span>
+                {openIndex === index ? (
+                  <Minus className="h-5 w-5 text-blue-600" />
+                ) : (
+                  <Plus className="h-5 w-5 text-blue-600" />
                 )}
-              </div>
-            ))}
-          </div>
+              </button>
+              {openIndex === index && (
+                <div className="px-6 pb-4">
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Contact Section */}
-      <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Still have questions?</h2>
-          <p className="text-gray-600 mb-8">
-            Our friendly team is here to help you with any other questions
-          </p>
+      <div className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Still have questions?</h2>
+          <p className="text-gray-600 mb-6">Our friendly team is here to help you with any other questions</p>
           <a
             href="/contact"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700"
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700 transition"
           >
             Contact Us
           </a>

@@ -3,7 +3,6 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import contact from "../assets/images/contact.jpg"; // Adjust the path as necessary
 
 export function Contact() {
-  // State for form data
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -12,20 +11,16 @@ export function Contact() {
     message: "",
   });
 
-  // State for submission status
   const [status, setStatus] = useState("");
 
-  // Handle input change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("Sending...");
 
-    // Simple validation
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
       setStatus("Please fill in all required fields.");
       return;
@@ -51,32 +46,30 @@ export function Contact() {
 
   return (
     <div className="relative w-full min-h-screen">
-    {/* Hero Section */}
-    <div 
-      className="relative h-[600px] bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${contact})`,
-      }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="relative min-h-[600px] w-full flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
-          <p className="text-xl text-white">We're here to help with all your travel needs</p>
+      {/* Hero Section */}
+      <div
+        className="relative h-[300px] md:h-[500px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${contact})` }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative flex items-center justify-center text-center px-4 min-h-[300px] md:min-h-[500px]">
+          <div>
+            <h1 className="text-2xl md:text-4xl font-bold text-white mb-3 capitalize">Contact Us</h1>
+            <p className="text-lg md:text-xl text-white">We're here to help with all your travel needs</p>
+          </div>
         </div>
       </div>
-    </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Information */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="bg-white rounded-lg shadow-md p-6 text-center lg:text-left">
               <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
 
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <Phone className="h-6 w-6 text-[#2a9df4] mr-4" />
+              <div className="space-y-6">
+                <div className="flex items-center lg:items-start">
+                  <Phone className="h-6 w-6 text-[#2a9df4] mr-3" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
                     <p className="text-gray-600">+91 8586980421</p>
@@ -84,8 +77,8 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <Mail className="h-6 w-6 text-[#2a9df4] mr-4" />
+                <div className="flex items-center lg:items-start">
+                  <Mail className="h-6 w-6 text-[#2a9df4] mr-3" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
                     <p className="text-gray-600">info@aeroflytravel.com</p>
@@ -93,24 +86,24 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-[#2a9df4] mr-4" />
+                <div className="flex items-center lg:items-start">
+                  <MapPin className="h-6 w-6 text-[#2a9df4] mr-3" />
                   <div>
                     <h3 className="font-semibold">Address</h3>
                     <p className="text-gray-600">Delhi, India</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <Clock className="h-6 w-6 text-[#2a9df4] mr-4" />
+                <div className="flex items-center lg:items-start">
+                  <Clock className="h-6 w-6 text-[#2a9df4] mr-3" />
                   <div>
                     <h3 className="font-semibold">Business Hours</h3>
                     <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM
+                      Mon - Fri: 9:00 AM - 6:00 PM
                       <br />
-                      Saturday: 10:00 AM - 4:00 PM
+                      Sat: 10:00 AM - 4:00 PM
                       <br />
-                      Sunday: Closed
+                      Sun: Closed
                     </p>
                   </div>
                 </div>
@@ -126,9 +119,7 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      First Name
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
                     <input
                       type="text"
                       name="firstName"
@@ -138,9 +129,7 @@ export function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Last Name
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
                     <input
                       type="text"
                       name="lastName"
@@ -152,9 +141,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Email
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
                   <input
                     type="email"
                     name="email"
@@ -165,25 +152,10 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Message
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                   <textarea
                     name="message"
-                    rows={6}
+                    rows={5}
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -192,7 +164,7 @@ export function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#2a9df4] text-white py-2 px-4 rounded-md hover:bg-[#1e87d6] transition-colors"
+                  className="w-full bg-[#2a9df4] text-white py-3 px-6 rounded-md text-lg hover:bg-[#1e87d6] transition"
                 >
                   Send Message
                 </button>

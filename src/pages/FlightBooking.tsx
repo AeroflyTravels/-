@@ -1,6 +1,6 @@
 import React from 'react';
 import { Plane, Calendar, Users } from 'lucide-react';
-import flight from '../assets/images/tg.jpg'; // Adjust the path as necessary
+import flight from '../assets/images/tg.jpg';
 
 export function FlightBooking() {
   const [tripType, setTripType] = React.useState('round');
@@ -9,16 +9,14 @@ export function FlightBooking() {
     <div className="relative w-full min-h-screen">
       {/* Hero Section */}
       <div 
-        className="relative h-[600px] bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${flight}`, 
-        }}
+        className="relative h-[300px] md:h-[500px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${flight})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative min-h-[600px] w-full flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Flight Booking</h1>
-            <p className="text-xl text-white">Book your next flight with ease</p>
+        <div className="relative flex items-center justify-center text-center px-4 min-h-[300px] md:min-h-[500px]">
+          <div>
+            <h1 className="text-2xl md:text-4xl font-bold text-white mb-3 capitalize">Flight Booking</h1>
+            <p className="text-lg md:text-xl text-white">Book your next flight with ease</p>
           </div>
         </div>
       </div>
@@ -26,9 +24,9 @@ export function FlightBooking() {
       {/* Search Form */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
         <div className="bg-white rounded-lg shadow-lg p-6">
-          <div className="flex space-x-4 mb-6">
+          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 mb-6">
             <button
-              className={`px-4 py-2 rounded-md ${
+              className={`w-full sm:w-auto px-4 py-2 rounded-md ${
                 tripType === 'round' ? 'bg-blue-600 text-white' : 'bg-gray-100'
               }`}
               onClick={() => setTripType('round')}
@@ -36,7 +34,7 @@ export function FlightBooking() {
               Round Trip
             </button>
             <button
-              className={`px-4 py-2 rounded-md ${
+              className={`w-full sm:w-auto px-4 py-2 rounded-md ${
                 tripType === 'oneway' ? 'bg-blue-600 text-white' : 'bg-gray-100'
               }`}
               onClick={() => setTripType('oneway')}
@@ -45,11 +43,9 @@ export function FlightBooking() {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                From
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">From</label>
               <div className="relative">
                 <Plane className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <input
@@ -60,9 +56,7 @@ export function FlightBooking() {
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                To
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">To</label>
               <div className="relative">
                 <Plane className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <input
@@ -74,11 +68,9 @@ export function FlightBooking() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Departure
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Departure</label>
               <div className="relative">
                 <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <input
@@ -89,9 +81,7 @@ export function FlightBooking() {
             </div>
             {tripType === 'round' && (
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Return
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Return</label>
                 <div className="relative">
                   <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                   <input
@@ -102,9 +92,7 @@ export function FlightBooking() {
               </div>
             )}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Passengers
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Passengers</label>
               <div className="relative">
                 <Users className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <select className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -126,27 +114,12 @@ export function FlightBooking() {
       {/* Featured Deals */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Featured Flight Deals</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Featured Flight Deals</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              {
-                from: 'New York',
-                to: 'London',
-                price: 599,
-                airline: 'Emirates',
-              },
-              {
-                from: 'Los Angeles',
-                to: 'Tokyo',
-                price: 799,
-                airline: 'Qatar Airways',
-              },
-              {
-                from: 'Chicago',
-                to: 'Paris',
-                price: 649,
-                airline: 'Turkish Airlines',
-              },
+              { from: 'New York', to: 'London', price: 599, airline: 'Emirates' },
+              { from: 'Los Angeles', to: 'Tokyo', price: 799, airline: 'Qatar Airways' },
+              { from: 'Chicago', to: 'Paris', price: 649, airline: 'Turkish Airlines' },
             ].map((deal, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex justify-between items-center mb-4">
