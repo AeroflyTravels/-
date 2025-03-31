@@ -22,7 +22,7 @@ export function FlightBooking() {
       </div>
 
       {/* Search Form */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-2">
         <div className="bg-white rounded-lg shadow-lg p-6">
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 mb-6">
             <button

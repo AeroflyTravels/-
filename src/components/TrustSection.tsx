@@ -12,6 +12,14 @@ import IncredibleIndia from "../assets/logo/Incredible-India-300x70.png";
 import MinistryofTourism from "../assets/logo/mti.svg";
 import ISO from "../assets/logo/iso.svg";
 import german from "../assets/logo/german.png";
+import saudia from "../assets/logo/saudia.png";
+import Thai from "../assets/logo/thai.png";
+import singapore from "../assets/logo/singapore.png";
+import united from "../assets/logo/united.png";
+import af from "../assets/logo/af.png";
+import jw from "../assets/logo/jw.png";
+import itc from "../assets/logo/itc.svg";
+
 
 /**
  * TrustSection component displays a section with partner logos,
@@ -31,6 +39,14 @@ export function TrustSection() {
     { name: "Ministry of Tourism", logo: MinistryofTourism },
     { name: "ISO", logo: ISO },
     { name: "German Gov", logo: german },
+    { name: "saudia", logo: saudia },
+    { name: "Thai", logo: Thai },
+    { name: "eu", logo: "https://europa.eu/youreurope/citizens/images/logos/youreurope-logo.svg" },
+    { name: "singapore", logo: singapore },
+    { name: "united", logo: united },
+    { name: "af", logo: af },
+    { name: "jw", logo: jw },
+    { name: "itc", logo: itc },
   ];
 
   const testimonials = [
@@ -90,7 +106,12 @@ export function TrustSection() {
         <div className="relative overflow-hidden w-full">
           <div className="flex w-max animate-scroll">
             {partners.concat(partners).map((partner, index) => (
-              <div key={index} className="flex-none w-28 h-16 mx-4 flex items-center justify-center">
+              <div
+                key={index}
+                className={`flex-none mx-4 flex items-center justify-center ${
+                  partner.name === "Thai" ? "w-54 h-28" : "w-28 h-16"
+                }`}
+              >
                 <img src={partner.logo} alt={partner.name} className="h-full object-contain brightness-110 contrast-110" loading="lazy" decoding="async" />
               </div>
             ))}
