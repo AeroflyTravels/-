@@ -21,23 +21,27 @@ export function Contact() {
     e.preventDefault();
     setStatus("Sending...");
 
+    // Check if all required fields are filled
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
       setStatus("Please fill in all required fields.");
       return;
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
+      const response = await fetch("https://serverr-lac.vercel.app/api/contact", {
+        method: "POST", // Ensure the method is POST
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         setStatus("Message sent successfully!");
+        // Clear the form fields after submission
         setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
       } else {
-        setStatus("Failed to send message. Please try again later.");
+        setStatus(`Failed to send message. Error: ${data.error || 'Unknown error'}`);
       }
     } catch (error) {
       setStatus("Error sending message. Check your network and try again.");
